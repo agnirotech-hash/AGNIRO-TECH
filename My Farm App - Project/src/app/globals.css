@@ -1,0 +1,191 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 40 30% 96%; /* Light Beige */
+    --foreground: 30 25% 25%; /* Dark Brown */
+
+    --card: 40 30% 100%;
+    --card-foreground: 30 25% 25%;
+
+    --popover: 40 30% 100%;
+    --popover-foreground: 30 25% 25%;
+
+    --primary: 120 39% 40%; /* Medium Green */
+    --primary-foreground: 120 30% 95%; /* Light color for text on primary */
+
+    --secondary: 100 30% 75%; /* Lighter Green */
+    --secondary-foreground: 100 25% 25%;
+
+    --muted: 40 20% 90%; /* Lighter beige for muted backgrounds */
+    --muted-foreground: 30 25% 45%; /* Darker muted text */
+
+    --accent: 39 100% 50%; /* Bright Orange #FFA500 */
+    --accent-foreground: 39 100% 15%; /* Dark color for text on orange */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 90%;
+    --ring: 39 100% 50%; /* Orange for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Regional Accents - Uganda */
+    --northern-accent-bg: 50 90% 75%; /* Lighter Dry Yellow for backgrounds */
+    --northern-accent-fg: 50 70% 30%; /* Darker Dry Yellow for text */
+    --central-accent-bg: 210 80% 70%; /* Lighter Lake Blue */
+    --central-accent-fg: 210 60% 30%; /* Darker Lake Blue */
+    --eastern-accent-bg: 80 50% 70%; /* Lighter Savannah Grass */
+    --eastern-accent-fg: 80 40% 30%; /* Darker Savannah Grass */
+    --western-accent-bg: 140 50% 70%; /* Lighter Mountain Green */
+    --western-accent-fg: 140 40% 25%; /* Darker Mountain Green */
+
+    /* Placeholder Regional Accents - USA (example, can be expanded) */
+    --blue-accent-bg: 220 80% 75%; /* Light Blue */
+    --blue-accent-fg: 220 60% 30%; /* Dark Blue */
+    --green-accent-bg: 130 50% 70%; /* Light Green */
+    --green-accent-fg: 130 40% 30%; /* Dark Green */
+    --orange-accent-bg: 30 90% 70%;  /* Light Orange */
+    --orange-accent-fg: 30 70% 30%;  /* Dark Orange */
+    --purple-accent-bg: 270 60% 75%; /* Light Purple */
+    --purple-accent-fg: 270 50% 35%; /* Dark Purple */
+
+    /* Placeholder Regional Accents - India (example) */
+    --red-accent-bg: 0 80% 75%;   /* Light Red */
+    --red-accent-fg: 0 60% 35%;   /* Dark Red */
+    --yellow-accent-bg: 50 90% 70%; /* Light Yellow */
+    --yellow-accent-fg: 50 70% 30%; /* Dark Yellow */
+    --cyan-accent-bg: 180 70% 70%; /* Light Cyan */
+    --cyan-accent-fg: 180 50% 30%; /* Dark Cyan */
+    --pink-accent-bg: 330 80% 80%; /* Light Pink */
+    --pink-accent-fg: 330 60% 40%; /* Dark Pink */
+
+
+    /* Chart Colors */
+    --chart-1: 120 39% 40%; /* Primary Green */
+    --chart-2: 39 100% 50%; /* Accent Orange */
+    --chart-3: 210 70% 55%; /* A variant of Central Blue */
+    --chart-4: 80 40% 50%;  /* A variant of Eastern Grass */
+    --chart-5: 140 40% 45%; /* A variant of Western Green */
+
+    /* Sidebar Colors - Light Theme */
+    --sidebar-background: 40 30% 98%; /* Slightly off-white, lighter than main bg */
+    --sidebar-foreground: 30 25% 20%; /* Darker than main fg for contrast */
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 40 20% 88%; /* Slightly different border for sidebar */
+    --sidebar-ring: var(--ring);
+  }
+
+  .dark {
+    --background: 30 15% 10%; /* Dark Brown/Almost Black */
+    --foreground: 40 20% 90%; /* Light Beige/Off-white */
+
+    --card: 30 15% 12%; /* Slightly lighter dark brown for cards */
+    --card-foreground: 40 20% 90%;
+
+    --popover: 30 15% 10%; /* Same as background for seamless popovers */
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 120 39% 55%; /* Brighter Green for dark mode */
+    --primary-foreground: 120 30% 15%; /* Darker text on brighter green */
+
+    --secondary: 100 30% 35%; /* Muted Darker Green */
+    --secondary-foreground: 100 25% 85%; /* Lighter text on muted green */
+
+    --muted: 30 15% 20%; /* Darker muted background */
+    --muted-foreground: 40 20% 65%; /* Lighter muted text */
+
+    --accent: 39 100% 60%; /* Brighter Orange for dark mode */
+    --accent-foreground: 39 100% 10%; /* Darker text on brighter orange */
+
+    --destructive: 0 70% 55%; /* Brighter red for destructive actions */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 15% 25%; /* Subtle border color */
+    --input: 30 15% 22%; /* Dark input background */
+    --ring: 39 100% 60%; /* Orange for focus rings in dark mode */
+
+    /* Dark Regional Accents - Uganda */
+    --northern-accent-bg: 50 50% 30%; 
+    --northern-accent-fg: 50 80% 80%; 
+    --central-accent-bg: 210 40% 25%; 
+    --central-accent-fg: 210 70% 80%; 
+    --eastern-accent-bg: 80 25% 25%; 
+    --eastern-accent-fg: 80 50% 80%; 
+    --western-accent-bg: 140 25% 25%; 
+    --western-accent-fg: 140 50% 80%;
+
+    /* Dark Placeholder Regional Accents - USA */
+    --blue-accent-bg: 220 50% 30%; 
+    --blue-accent-fg: 220 80% 80%; 
+    --green-accent-bg: 130 30% 25%; 
+    --green-accent-fg: 130 60% 75%; 
+    --orange-accent-bg: 30 50% 30%; 
+    --orange-accent-fg: 30 80% 75%; 
+    --purple-accent-bg: 270 40% 30%;
+    --purple-accent-fg: 270 70% 80%;
+
+    /* Dark Placeholder Regional Accents - India */
+    --red-accent-bg: 0 50% 30%;   
+    --red-accent-fg: 0 80% 80%;   
+    --yellow-accent-bg: 50 50% 28%; 
+    --yellow-accent-fg: 50 80% 75%; 
+    --cyan-accent-bg: 180 40% 28%;  
+    --cyan-accent-fg: 180 70% 75%; 
+    --pink-accent-bg: 330 50% 35%;  
+    --pink-accent-fg: 330 80% 85%; 
+
+    /* Dark Chart Colors */
+    --chart-1: 120 39% 55%; 
+    --chart-2: 39 100% 60%; 
+    --chart-3: 210 60% 60%; 
+    --chart-4: 80 35% 55%;  
+    --chart-5: 140 35% 50%; 
+    
+    /* Sidebar Colors - Dark Theme */
+    --sidebar-background: 30 15% 8%; 
+    --sidebar-foreground: 40 20% 85%; 
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 30 15% 20%; 
+    --sidebar-ring: var(--ring);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Styles for drag and drop */
+.dragging-card {
+  opacity: 0.4;
+  border: 2px dashed hsl(var(--primary));
+  cursor: grabbing;
+}
+.drag-over-card {
+  /* You can add specific styles for when an item is dragged over another */
+  /* For example, a border or shadow to indicate a drop target */
+  box-shadow: 0 0 8px 2px hsl(var(--accent) / 0.7);
+  transform: scale(1.02); /* Slight zoom */
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+}
